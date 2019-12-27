@@ -1,5 +1,5 @@
 FROM petervizi/raspbian:buster
-MAINTAINER Peter Vizi peter.vizi@gmail.com
+LABEL maintainer="peter.vizi@gmail.com"
 
 ADD qemu-arm-static /usr/bin/qemu-arm-static
 

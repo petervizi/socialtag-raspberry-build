@@ -4,6 +4,15 @@ LABEL maintainer="peter.vizi@gmail.com"
 ADD qemu-arm-static /usr/bin/qemu-arm-static
 
 RUN echo /usr/lib/arm-linux-gnueabihf/libarmmem-v8l.so > /etc/ld.so.preload
-RUN apt-get -y update
-RUN apt-get -y upgrade
-RUN apt-get -y install git devscripts debhelper libdbus-1-dev libudev-dev node-gyp nodejs npm
+RUN apt-get update && \
+  apt-get -y upgrade && \
+  apt-get -y install --no-install-recommends \
+    git \
+    devscripts \
+    debhelper \
+    libdbus-1-dev \
+    libudev-dev \
+    node-gyp \
+    nodejs \
+    npm && \
+  rm -rf /var/lib/apt/lists/*

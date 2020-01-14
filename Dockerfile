@@ -8,6 +8,7 @@ RUN apt-get update && \
   apt-get -y upgrade && \
   apt-get -y install --no-install-recommends \
     git \
+    git-buildpackage \
     devscripts \
     debhelper \
     libdbus-1-dev \

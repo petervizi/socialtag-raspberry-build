@@ -11,14 +11,15 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN apt-get update && \
   apt-get -y upgrade && \
   apt-get -y install --no-install-recommends \
+    debhelper \
+    devscripts \
     git \
     git-buildpackage \
-    devscripts \
-    debhelper \
     libdbus-1-dev \
     libudev-dev \
     node-gyp \
     nodejs \
     npm \
+    ruby \
     yarn && \
   rm -rf /var/lib/apt/lists/*

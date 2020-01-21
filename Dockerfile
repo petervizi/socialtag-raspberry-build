@@ -21,6 +21,7 @@ RUN set -ex; \
     node-gyp \
     nodejs \
     npm \
-    ruby2.5-dev && \
+    ruby2.5-dev \
+    yarn && \
   gem install fpm --version 1.10 && \
   rm -rf /var/lib/apt/lists/*

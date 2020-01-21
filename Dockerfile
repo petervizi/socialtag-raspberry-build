@@ -22,5 +22,5 @@ RUN set -ex; \
     nodejs \
     npm \
     ruby2.5-dev && \
-  gem install fpm && \
+  gem install fpm --version 1.10 && \
   rm -rf /var/lib/apt/lists/*

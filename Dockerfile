@@ -1,4 +1,4 @@
-FROM petervizi/raspbian:buster
+FROM petervizi/raspbian:2020-02-13-raspbian-buster
 LABEL maintainer="peter.vizi@gmail.com"
 
 ADD qemu-arm-static /usr/bin/qemu-arm-static
